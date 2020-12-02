@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="biblioteca.html">
+    <title>LOGIN</title>
+</head>
+<body background="img/fondo-login.jpeg">
+    <div class="cod-container">
+        <div class="form-header">
+            <img id="logo" src="img/icono-login.jpeg" alt="">
+            <h1>Biblioteca<span>Virtual</span></h1>
+        </div>
+        <div class="form-content">
+            <form action="php/login.php" class="cod-form" id="frmLogin">
+                <div class="form-title">
+                    <h3>Iniciar Sesion</h3>
+                </div>
+
+                <div class="input-group">
+                    <input type="email" class="form-input" name="Usuario" placeholder="Ingresa el correo"required> 
+                </div>
+                <div class="input-group">
+                    <input type="password" class="form-input" name="Password" placeholder="Ingresa la contraseña" required> 
+                </div>
+                <br>
+                <div class="input-group">
+                    <input type="submit" id="btnEnviar" class="form-input" value="Iniciar Sesion">
+                    <input type="button" id="btnRegistrar" class="form-input" value="Registrarse">
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $btnRegistrar = $("#btnRegistrar");
+        
+        $btnRegistrar.on("click", function (){
+            $(location).attr('href',"registro.html");
+        });
+    </script>
+</body>
+</html>
